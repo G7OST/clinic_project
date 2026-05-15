@@ -21,7 +21,7 @@ namespace clinic_project.Controllers
         }
         private readonly AppDbContext _db;
       
-       // [Authorize(Roles ="ClinicOwner")]
+       [Authorize(Roles ="ClinicOwner")]
         [HttpPost("Create_Clinic")]
 
         public async Task<IActionResult>CreateClinic(ClinicDto clinicDto)
